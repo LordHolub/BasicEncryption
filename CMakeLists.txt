@@ -18,6 +18,11 @@ set(source_dir src)
 set(
         source_files
         ${source_dir}/main.cpp
+        ${source_dir}/interface.cpp
+        ${source_dir}/encryption.cpp
+        ${source_dir}/interface.h
+        ${source_dir}/headers.h
+        ${source_dir}/encryption.h
 )
 
 set(build_dir "executable")
