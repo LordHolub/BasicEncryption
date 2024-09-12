@@ -26,7 +26,7 @@ void Interface::CreateInterface(string &rstr){
                 }) | border,
             hbox({text(" Decryption string : "), input_second_string->Render()}) | border,
             separator(),
-            hbox({text( "Output encryption : " + Encryption::RSimpleReplacement(rstr, 3)), text( "Output decryption : " + Encryption::LSimpleReplacement(encrypted_str, 3)) }),
+            hbox({text( "Output encryption : " + Encryption::SimpleReplacement(rstr, 3)), text( "Output decryption : " + Encryption::SimpleReplacement(encrypted_str, -3)) }),
         }) | border;
     });
 
