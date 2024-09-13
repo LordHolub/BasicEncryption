@@ -5,7 +5,7 @@ class Encryption {
 public:
     Encryption();
 
-    static std::string SimpleReplacement(const std::string &str, int step);
+    static std::string SimpleReplacement(const std::string &str, int shift);
 
     ~Encryption();
 };

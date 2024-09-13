@@ -8,4 +8,6 @@ public:
     void CreateInterface(std::string &str);
 
     ~Interface();
+private:
+    int ToNumber(std::string &str_number);
 };
