@@ -30,19 +30,23 @@ set(EXECUTABLE_OUTPUT_PATH ${build_dir})
 
 set(
         support_files
-        #LICENSE
+        LICENSE
 )
 
 file(COPY ${support_files} DESTINATION "${build_dir}")
 
 add_executable(${PROJECT_NAME} ${source_files} ${support_files})
 
-include_directories(/usr/local/include/) #This directory have headers files ftxui, on other device this may be different
+#include_directories(/usr/local/include/) #This directory have headers files ftxui, on other device this may be different
+include_directories(D:/programing/cpp/FTXUI/include)
 set(                                     #This location static lib, on other device this may be different
     FTXUI_LIBRARIES
-    /usr/local/lib/libftxui-component.a
-    /usr/local/lib/libftxui-screen.a
-    /usr/local/lib/libftxui-dom.a
+    D:/programing/cpp/FTXUI/build/libftxui-component.a
+    D:/programing/cpp/FTXUI/build/libftxui-screen.a
+    D:/programing/cpp/FTXUI/build/libftxui-dom.a
+    #/usr/local/lib/libftxui-component.a
+    #/usr/local/lib/libftxui-screen.a
+    #/usr/local/lib/libftxui-dom.a
 )
 
 target_link_libraries(${PROJECT_NAME} ${FTXUI_LIBRARIES})
