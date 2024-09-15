@@ -1,11 +1,9 @@
 #include "headers.h"
 
 int main(){
-    string str;
-
     Interface interface;
 
-    interface.CreateInterface(str);
+    interface.CreateInterface();
     
     return EXIT_SUCCESS;
 }

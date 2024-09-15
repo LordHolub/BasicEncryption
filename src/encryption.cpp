@@ -56,18 +56,18 @@ string Encryption::PolibyusSquare(const string &str){
     
     temp = encryption_str;
     encryption_str = "";
-    for(size_t i = 0; i < temp.size(); i += 2);
+    for(size_t i = 0; i < temp.size(); i += 2)
         encryption_str += numbers[temp.substr(i, 2)];
 
     return encryption_str;
 }
 
-string Encryption::DePolibyusSquare(string &str){
+string Encryption::DePolibyusSquare(const string &str){
     string decryption_str = "";
     string temp;
 
     if(str.size() != 1 && str.size()){
-        for(cahr ch : str)
+        for(char ch : str)
             temp += letters[ch];
         
         for(short i = temp.size() - 1; i >= temp.size() / 2; i--){

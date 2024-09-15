@@ -5,7 +5,7 @@ class Interface {
 public:
     Interface();
 
-    void CreateInterface(std::string &str);
+    void CreateInterface();
 
     ~Interface();
 private:

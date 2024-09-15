@@ -8,12 +8,12 @@ public:
     static std::string SimpleReplacement(const std::string&, int);
     static std::string PolibyusSquare(const std::string&);
     static std::string DePolibyusSquare(const std::string& str);
-    static std::string CipherTrithemius(const string &, short shift = 0, bool decryption = false);
-    static std::string CipherPermutation(const string &);
+    static std::string CipherTrithemius(const std::string &, short shift = 0, bool decryption = false);
+    static std::string CipherPermutation(const std::string &);
 
     ~Encryption();
 private:
-    std::unordered_map<char, std::string> letters = {
+    inline static std::unordered_map<char, std::string> letters = {
         {'a', "11"}, {'b', "12"}, {'c', "13"}, {'d', "14"}, {'e', "15"},
         {'f', "21"}, {'g', "22"}, {'h', "23"}, {'j', "24"}, {'i', "24"},
         {'k', "25"}, {'l', "31"}, {'m', "32"}, {'n', "33"}, {'o', "34"},
@@ -21,7 +21,7 @@ private:
         {'u', "45"}, {'v', "51"}, {'w', "52"}, {'x', "53"}, {'y', "54"},
         {'z', "55"},
     };
-    std::unordered_map<std::string, char> numbers = {
+    inline static std::unordered_map<std::string, char> numbers = {
         {"11", 'a'}, {"12", 'b'}, {"13", 'c'}, {"14", 'd'}, {"15", 'e'},
         {"21", 'f'}, {"22", 'g'}, {"23", 'h'}, {"24", 'i'}, {"25", 'k'},
         {"31", 'l'}, {"32", 'm'}, {"33", 'n'}, {"34", 'o'}, {"35", 'p'}, 
