@@ -97,9 +97,15 @@ string Encryption::CipherTrithemius(const string &str, short shift, bool decrypt
         if (shift > 26)
             shift = 0;
         if (decryption)
-            encryption_str += ch - shift;
+            if(ch - shift < 'a')
+                encryption_str += 'z' - ('a' - ch);
+            else
+                encryption_str += ch - shift;
         else
-            encryption_str += ch + shift;
+            if(ch + shift > 'z')
+                encryption_str += 'a' + (ch - 'z');
+            else
+                encryption_str += ch + shift;
         shift++;
     }
     return encryption_str;
