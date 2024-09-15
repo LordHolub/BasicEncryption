@@ -5,9 +5,11 @@ class Encryption {
 public:
     Encryption();
 
-    static std::string SimpleReplacement(const std::string &str, int shift);
-    static std::string PolibyusSquare(const std::string &str);
+    static std::string SimpleReplacement(const std::string&, int);
+    static std::string PolibyusSquare(const std::string&);
     static std::string DePolibyusSquare(const std::string& str);
+    static std::string CipherTrithemius(const string &, short shift = 0, bool decryption = false);
+    static std::string CipherPermutation(const string &);
 
     ~Encryption();
 private:

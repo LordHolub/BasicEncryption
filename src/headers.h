@@ -4,6 +4,7 @@
 #include <iostream>
 #include <vector>
 #include <unordered_map>
+#include <algorithm>
 
 #include <ftxui/component/component.hpp>
 #include <ftxui/component/component_base.hpp>

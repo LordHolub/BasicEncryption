@@ -89,6 +89,41 @@ string Encryption::DePolibyusSquare(string &str){
     return decryption_str;
 }
 
+string Encryption::CipherTrithemius(const string &str, short shift, bool decryption)
+{
+    string encryption_str = "";
+    for (char ch : str)
+    {
+        if (shift > 26)
+            shift = 0;
+        if (decryption)
+            encryption_str += ch - shift;
+        else
+            encryption_str += ch + shift;
+        shift++;
+    }
+    return encryption_str;
+}
+
+string Encryption::CipherPermutation(const string &str)
+{
+    string encryption_str = "";
+    if (str.size() > 1)
+    {
+        for (size_t i = 0; i < str.size(); i += 2)
+        {
+            try
+            {
+                encryption_str += str.at(i + 1);
+            }
+            catch (exception)
+            {
+            }
+            encryption_str += str[i];
+        }
+    }
+    return encryption_str;
+}
 
 Encryption::Encryption() {};
 Encryption::~Encryption() {};
